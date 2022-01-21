@@ -24,6 +24,11 @@ public class TripController {
         return ResponseEntity.ok(tripService.findAll());
     }
 
+    @GetMapping("/hello")
+    public ResponseEntity<String> getHelloWorld() {
+        return ResponseEntity.ok("Hello world");
+    }
+
     @GetMapping
     public ResponseEntity<Trip> findById(@RequestParam Long id) {
         return ResponseEntity.ok(tripService.findById(id));
